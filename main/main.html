@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <ul class="nav nav-tabs">
+    <li class="actvie">
+      <span>
+        <a href="#/main">微秀列表</a></span>
+    </li>
+    <li class="">
+      <span>
+        <a href="#/statistics">数据统计</a></span>
+    </li>
+  </ul>
+  <div>
+    <ul class="row">
+      <li ng-repeat="list in sceneList track by $index" ng-style="{'animation-delay' : $index * 50 + 'ms'}" class="col-xs-3">
+        <div>{{list.status}}</div>
+        <!-- <img ng-src="{{list.imgSrc}}" style="width: 200px;"> -->
+        <div style="height: 250px; background: url({{list.imgSrc}});background-repeat: no-repeat;background-size: cover;" ng-hover="">
+          <p>{{list.title}}</p>
+          <div class="overlay" >
+            <div class="edit">
+              <a class="edit-same" href="../ng1learning/view/index.html?v{{list.id}}">
+
+                <em class="eqf-eye background-color-width-change" style="font-size:18px"></em>
+                <span>预览</span></a>
+              <a class="edit-same" >
+                <em class="eqf-xiuziti background-color-width-change" style="font-size:18px;"></em>
+                <span>编辑</span></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <p class="ellipsis ng-binding">fdsdfdsaf</p>
+            <div class="a_login">
+              <span style="color:#bbb;white-space: nowrap;float:left;margin:0 0 0 20px;">微秀展示:
+                <span style="padding:0 5px;" class="ng-binding"></span>次
+                <br>信息采集:
+                <span style="padding:0 5px;" class="ng-binding">0</span>条</span>
+              <span style="float:right;margin:15px 20px 0 0;">
+                <span class="ind_wfb ng-scope">未发布
+                  <span style="color: #ff0000; display:inline;">!</span></span>
+              </span>
+            </div>
+            <div class="buttons clearfix">
+              <div class="set ng-scope" ng-if="!branchid">
+                <a class="delete background-color-width-change button ng-scope" >
+                  <em class="eqf-scene-delete"></em>
+                  <span  ng-click="deletShow()">删除</span></a>
+                <a class="button background-color-width-change operation ng-scope">
+                  <em class="eqf-scene-copy"></em>
+                  <span>复制</span></a>
+                <a class="button background-color-width-change ng-scope" >
+                  <em class="eqf-scene-gift"></em>
+                  <span>转送</span></a>
+                <a class="button background-color-width-change" >
+                  <em class="eqf-scene-setting"></em>
+                  <span>设置</span></a>
+              </div>
+              <a class="erweima button ng-isolate-scope">
+                <em class="eqf-QRcode"></em>
+              </a>
+            </div>
+          </div>
+      </li>
+    </ul>
+    </div>
+  </div>

@@ -1,0 +1,9 @@
+{
+  "name": "gulp_test",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp-clean": "^0.3.2",
+    "gulp-jshint": "^2.0.4",
+    "gulp-rename": "^1.2.2"
+  }
+}
