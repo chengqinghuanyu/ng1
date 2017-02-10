@@ -22189,6 +22189,10 @@ span.no-yangshi-qr{
   .aqrcode .ng-isolate-scope{
   	text-align: center;
     color: #f00;
+    min-height: 270px;
+  }
+  .aqrcode+canvas{
+  	margin-top: 30px;
   }
   .aqrcode.ng-scope{
   	text-align: center;
@@ -22203,14 +22207,16 @@ span.no-yangshi-qr{
   }
   .contain .t-left,
   .contain .t-right{
-  	box-flex: 2;
-  	-webkit-box-flex: 2;
+  	box-flex: 4;
+  	-webkit-box-flex: 4;
   	height: 100%;
   	border: 1px solid #000;
+  	width: 20%;
   }
   .contain .t-center{
-  	box-flex: 6;
-  	-webkit-box-flex: 6;
+  	box-flex: 4;
+  	-webkit-box-flex: 4;
+  	width: 60%;
   }
   .t-center{
   	background: #e0e0e0;

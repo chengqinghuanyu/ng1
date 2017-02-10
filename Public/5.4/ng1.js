@@ -40,7 +40,7 @@ angular.module('app').config(['$routeProvider',function(e){
                   templateUrl:"home/show.html",
                   controller:"ShowCtrl"
                 }).when("/scene",{
-                  templateUrl:"scene/index.html",
+                  templateUrl:"scene/scene.html",
                   controller:"SceneCtrl"
                 })
                 .otherwise({
@@ -341,10 +341,50 @@ angular.module('show').controller("ShowCtrl",["$scope","$routeParams","secen.sho
        }
 
 }])
-angular.module("scene",[]),
-angular.module("scene").controller("SceneCtrl",["$scope","$rootScope","$http","$q","$timeout","$routeParams",function(a,b,c,d,e,f){
- // a.id = f.id; 
- 
+angular.module("scene",["froala"]).value("froalaConfig", {
+        toolbarInline: false,
+        placeholderText: 'Enter Text Here'
+    }),
+angular.module("scene").controller("SceneCtrl",["$scope","$rootScope","$http","$q","$timeout","$routeParams","froalaConfig",function(a,b,c,d,e,f,froalaConfig){
+
+     
+    a.titleOptions = {
+      placeholderText: 'Add a Title',
+      charCounterCount: false,
+      toolbarInline: true,
+      events: {
+        'froalaEditor.initialized': function() {
+          console.log('initialized');
+        }
+      }
+    };
+
+    a.initialize = function(initControls) {
+      a.initControls = initControls;
+      a.deleteAll = function() {
+        initControls.getEditor()('html.set', '');
+      };
+    };
+
+    a.myTitle = '<span style="font-family: Verdana,Geneva,sans-serif; font-size: 30px;">My Document\'s Title</span><span style="font-size: 18px;"></span></span>';
+    a.sample2Text = '';
+    a.sample3Text = '';
+
+    a.imgModel = {src: 'assets/images/a.jpeg'};
+
+    a.buttonModel = {innerHTML: 'Click Me'};
+
+    a.inputModel = {placeholder: 'I am an input!'};
+    a.inputOptions = {
+      angularIgnoreAttrs: ['class', 'ng-model', 'id', 'froala']
+    }
+
+    a.initializeLink = function(linkInitControls) {
+      a.linkInitControls = linkInitControls;
+    };
+    a.linkModel = {href: 'https://www.froala.com/wysiwyg-editor'}
+
+     
 }])
 
 angular.module("main/main.html", [])
