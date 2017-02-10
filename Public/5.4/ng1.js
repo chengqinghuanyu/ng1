@@ -22,7 +22,8 @@ iphoneCheck = function() {
 isIOS = function() {
     return /ipad|iphone/i.test(navigator.userAgent)
 }
-angular.module('app',['ui.bootstrap','ngRoute','main','homepage','show','ngAnimate']),
+
+angular.module('app',['ui.bootstrap','ngRoute','main','homepage','show','ngAnimate','scene']),
 angular.module('app').config(['$routeProvider',function(e){
                 e.when('/main',{
                   templateUrl:"main/main.html",
@@ -38,6 +39,9 @@ angular.module('app').config(['$routeProvider',function(e){
                 }).when("/show/:id",{
                   templateUrl:"home/show.html",
                   controller:"ShowCtrl"
+                }).when("/scene",{
+                  templateUrl:"scene/index.html",
+                  controller:"SceneCtrl"
                 })
                 .otherwise({
                   redirectTo:'/main'
@@ -63,7 +67,7 @@ angular.module("app").run(["$rootScope", "$location",function(a,b){
     console.log(b);
 }]),
 angular.module('main',[]);
-angular.module('main').controller("MainCtrl",["$scope","$rootScope","$routeParams","scene.lists.datas","$uibModal",function(a,b,c,d,e){
+angular.module('main').controller("MainCtrl",["$scope","$rootScope","$routeParams","scene.lists.datas","$uibModal", "qrcode.service", function(a,b,c,d,e,g){
     //a.sceneList = c.getData().$$state;
     a.sceneList = {};
    d.getDatas().success(function (response, status, headers, config) {
@@ -118,38 +122,191 @@ a.deletShow = function(){
         console.log(b);
         })
 }
+a.showqrcode = function(){
+  //alert(11);
+  e.open({
+     keyboard: !1,
+     backdropClick: !0,
+     windowClass: "console seven-contain qrcodedialog",
+     templateUrl: "dialog/dialog.qrcode.tpl.html",
+     controller: "DialogQrcodeCtrl",
+     resolve: {
+           header : function() { 
+            return angular.copy(a.header); 
+
+            },
+           msg : function() { 
+
+            return angular.copy(a.msg); 
+          },
+          obj :function(){
+            return {
+              amount:a.price,
+              qrurl:a.qrurl
+            }
+          }
+        }
+  }).result.then(function(b) {
+        console.log(b);
+
+
+        },function(b){
+        console.log(b);
+        })
+}
     
    
 }]).factory('scene.lists.datas', ["$rootScope","$http",function (a,b) {
-       var c ={}
-       return c.getDatas =function(){
-                return b.get('datas/main-ctrl.json');//return 一个promise
-        },c
+           var c ={}
+           return c.getDatas =function(){
+                    return b.get('datas/main-ctrl.json');//return 一个promise
+            },c
+}]).factory("qrcode.service",["$rootScope","$http",function(a,b){
+      var d ={} 
+            d.payways = [
+              {
+                title:"微信支付",
+                link:"www.weixin.com",
+                type:"wechat",
+                select:true
+              },
+              {
+                title:"支付宝",
+                link:"www.pay.com",
+                type:"alipay",
+                select:false
+              },
+              {
+                title:"财付通",
+                link:"www.ipaid.com",
+                type:"tenpay",
+                select:false
+              }
+            ];
+            d.getWechat=function(){
+              return "www.weixin.com";
+            };
+            d.getTenpay=function(){
+              return "www.ipaid.com";
+            };
+            d.getAlipay=function(){
+              return "www.pay.com";
+            };
+            d.selectpayWay={
+              title:"微信",
+              link:d.getWechat(),
+              type:"wechat"
+            }
+     return d;
+}]).controller("DialogQrcodeCtrl",["$scope","header","msg","obj","qrcode.service", function(a,b,c,d,e){
+     a.header = b;
+     a.msg = c;
+     a.obj = d;
+     //a.price = 
+     a.obj.amount = d.amount;
+     //a. qrurl = 
+     a.obj.qrurl = d.qrurl
+     a.ok = function(){
+        a.$close({
+          amount : d.amount,
+          qrurl  : d.qrurl
+        })
+        a.$dismiss();
+      }
+      a.cancel = function(){
+          // a.$close({
+          // amount : a.price,
+          // qrurl  :a. qrurl
+          // })
+        a.$dismiss();
+      }
+      console.log(e);
+      a.modeOfPayment = [];
+      for(var i=0; i< e.payways.length;i++){
+        a.modeOfPayment.push(e.payways[i])
+      }
+      a.payWay = e.selectpayWay.type;
+      console.log(11111111);
+      console.log(a.payWay);
+      console.log(222222222);
+      a.qcodeTabtype = function(a0,b0){
+        console.log(b0);
+         a.payWay = b0;
+        for(var i in a.modeOfPayment){
+          e.payways[i]['select'] = false;
+        }
+        //alert(b0);
+        for(var j in a.modeOfPayment){
+          if( e.payways[j]['type'] ==  b0){
+             e.payways[j]['select'] = true;
+          }
+        }
+        a.qrcodeurl = e.selectpayWay
+        if(b0 === "tenpay"){//财付通
+          e.selectpayWay.type = "tenpay";
+          a.qrcodeurl = e.selectpayWay.link = e.getTenpay();
+        }
+        if(b0 === "alipay"){//支付宝
+          e.selectpayWay.type = "alipay";
+          a.qrcodeurl = e.selectpayWay.link = e.getAlipay();
+        }
+        if(b0 === "wechat"){//微信
+          e.selectpayWay.type = "wechat";
+          a.qrcodeurl = e.selectpayWay.link = e.getWechat();
+        }
+
+      }
+
+}]).directive("payqrcode",["$rootScope","$http","$timeout","qrcode.service",function(a,b,c,d){
+
+  var obj ={};
+  obj.scope={
+        qrcodeUrl:'@',
+        qcodeTabtype:'&'
+  },
+  obj.restrict = 'AE',
+  obj.templateUrl = 'components/qrcode.tpl.html'
+  //obj.controller = 'PosterPayCtrl',
+  obj.link = function(scope, iElement, iAttrs, controller) {
+        console.log(d.selectpayWay.link);
+        c(function(){
+          //console.log(iElement);
+          $(iElement).qrcode({ 
+                render: "canvas", //table方式 
+                width: 180, //宽度 
+                height:180, //高度 
+                text: d.selectpayWay.link //任意内容 
+            });
+        },1000)
+      }
+  return obj
+  
+
 }]),
 
 angular.module('main').controller("BindEmailDialogCtrl",["$scope","header","msg","obj",function(a,b,c,d){
 
-		a.header = b;
-		a.msg = c;
-		a.obj = d;
-		//a.price = 
-		a.obj.amount = d.amount;
-		//a. qrurl = 
-		a.obj.qrurl = d.qrurl;
-		a.ok = function(){
-			a.$close({
-			amount : d.amount,
-			qrurl  : d.qrurl
-			})
-			a.$dismiss();
-		}
-		a.cancel = function(){
-		// a.$close({
-		// amount : a.price,
-		// qrurl  :a. qrurl
-		// })
-		a.$dismiss();
-		}
+ a.header = b;
+ a.msg = c;
+ a.obj = d;
+ //a.price = 
+ a.obj.amount = d.amount;
+ //a. qrurl = 
+ a.obj.qrurl = d.qrurl
+ a.ok = function(){
+    a.$close({
+      amount : d.amount,
+      qrurl  : d.qrurl
+    })
+    a.$dismiss();
+  }
+  a.cancel = function(){
+      // a.$close({
+      // amount : a.price,
+      // qrurl  :a. qrurl
+      // })
+    a.$dismiss();
+  }
 
 }])
 angular.module('homepage',[]),
@@ -158,22 +315,19 @@ angular.module('homepage').controller("HomePageCtrl",["$scope",function(a){
 }]),
 angular.module('show',[]),
 angular.module('show').controller("ShowCtrl",["$scope","$routeParams","secen.show",function(a,b,c){
-	   a.id = b.id; 
-	   a.showData = {}
-	   c.getDatas().success(function (response, status, headers, config) {
-	          //要用到返回数据就在这里用了
-	          console.log(response);
-	                        
-	          a.showData = response;
+   a.id = b.id; 
+   a.showData = {}
+   c.getDatas().success(function (response, status, headers, config) {
+          //要用到返回数据就在这里用了
+          console.log(response);
+                        
+          a.showData = response;
 
-	          }).error(function (response, status, headers, config) {
+          }).error(function (response, status, headers, config) {
 
-	            alert(status + response);
+            alert(status + response);
 
-	        });
-
-
-
+        });
 
 }]).factory("secen.show",["$rootScope","$http",function(a,b){//angular中的服务都是单例对象
        var c ={}
@@ -187,6 +341,29 @@ angular.module('show').controller("ShowCtrl",["$scope","$routeParams","secen.sho
        }
 
 }])
+angular.module("scene",[]),
+angular.module("scene").controller("SceneCtrl",["$scope","$rootScope","$http","$q","$timeout","$routeParams",function(a,b,c,d,e,f){
+ // a.id = f.id; 
+ 
+}])
+
+angular.module("main/main.html", [])
+.run(["$templateCache", function(a) {
 
 
+}]),
+angular.module("home/homePage.html", [])
+.run(["$templateCache", function(a) {
 
+
+}]),
+angular.module("home/show.html", [])
+.run(["$templateCache", function(a) {
+
+
+}]),
+angular.module("scene/index.html", [])
+.run(["$templateCache", function(a) {
+
+
+}])

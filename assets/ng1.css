@@ -22138,3 +22138,83 @@ span.no-yangshi-qr{
   	    border: none;
   }
 
+/*---滚动条默认显示样式--*/  
+.price_con_info::-webkit-scrollbar-thumb{  
+   background-color:#7e7e7e;  
+   height:50px;   
+   -webkit-border-radius:4px;  
+   border: none;  
+}  
+ 
+/*---鼠标点击滚动条显示样式--*/  
+.price_con_info::-webkit-scrollbar-thumb:hover{  
+   background-color:#7e7e7e;  
+   height:50px;  
+   -webkit-border-radius:4px;  
+}  
+ 
+/*---滚动条大小--*/  
+.price_con_info::-webkit-scrollbar{  
+   width:4px;  
+   height:4px;  
+}  
+ 
+/*---滚动框背景样式--*/  
+.price_con_info::-webkit-scrollbar-track-piece{  
+   background-color:#fff;  
+   -webkit-border-radius:0;  
+}
+.price_con_info::-webkit-scrollbar-thumb:active{
+      height:50px;
+      background-color:#7e7e7e;
+      -webkit-border-radius:4px;
+  }  
+  .price_con{
+  	overflow: hidden!important;
+  }
+  .price_con .price_con_info{
+  	 overflow-y: auto;
+  	    height: 250px;
+  	    word-break: break-all; 
+  	    word-wrap:break-word;
+  	    display: block!important;
+  	    background-color: rgba(0,0,0,0);
+  	    width: 100%;
+  	    border: none;
+  }
+  .qrcode {
+  	width: 100%;
+  	text-align: center
+  }
+  .aqrcode .ng-isolate-scope{
+  	text-align: center;
+    color: #f00;
+  }
+  .aqrcode.ng-scope{
+  	text-align: center;
+  }
+  .contain{
+  	width: 100%;
+  	display: flex;
+  	display: -webkit-flex; /* Safari */
+  	display: -moz-box; 
+    display: -webkit-box; 
+    display: box;
+  }
+  .contain .t-left,
+  .contain .t-right{
+  	box-flex: 2;
+  	-webkit-box-flex: 2;
+  	height: 100%;
+  	border: 1px solid #000;
+  }
+  .contain .t-center{
+  	box-flex: 6;
+  	-webkit-box-flex: 6;
+  }
+  .t-center{
+  	background: #e0e0e0;
+  	min-height: 486px; 
+  }
+
+

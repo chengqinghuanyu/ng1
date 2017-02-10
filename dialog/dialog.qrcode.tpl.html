@@ -1,0 +1,48 @@
+<style type="text/css" media="screen">
+.nav > li.active{
+	background: #fff;
+}	
+</style>
+<div class="dialog-contain ind_ransfer">
+	<div class="confirm_head">
+		<span class="fl" style="font-size:20px">请选择喜欢的支付方式支付</span>
+		<span class="fr confirm_close" style="font-size:25px;cursor:pointer;" ng-click="cancel();">×</span>
+	</div>
+	<div>
+
+<!-- 		{{header}}
+		
+
+		{{msg}}
+		
+		{{obj.amount}}
+		
+		{{obj.qrurl}} -->
+
+
+				
+
+			<ul class="nav nav-bg">
+				<li ng-class="{'active':payway.select}" ng-repeat="payway in modeOfPayment"><span ng-click="qcodeTabtype(payway.select,payway.type)">{{payway.title}}<!--  === {{payway.type}} --></span></li>
+				<!-- <li ng-class="{'active':payWay.wechat}"><span ng-click="qcodeTabtype(payWay.wechat,'wechat')">微信</span></li>
+				<li ng-class="{'active':payWay.tenpay}"><span ng-click="qcodeTabtype(payWay.tenpay,'tenpay')">财付通</span></li> -->
+			</ul>
+		<div ng-if=" payWay == 'alipay'" class="aqrcode">
+			<div payqrcode>1111</div>
+		</div>
+		<div ng-if="payWay == 'wechat'" class="aqrcode">
+			<div payqrcode>222</div>
+		</div>
+		<div ng-if="payWay == 'tenpay'" class="aqrcode">
+			<div payqrcode>333</div>
+		</div>
+		
+	</div>
+	<div class="btn-contain btn-small">
+		<a ng-click="ok();" class="btn-main ng-binding">
+		确定
+		</a><a ng-click="cancel();" class="btn-grey0 ng-binding">
+		取消
+		</a>
+	</div>
+</div>
