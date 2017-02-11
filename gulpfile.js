@@ -28,6 +28,22 @@ gulp.task('scripts', function() {
 		}));
 });
 
+
+//手机端js压缩
+gulp.task('scriptsphone', function() {
+	return gulp.src(['view/js/*.js', '!js/*min.js'])// 要压缩的js文件
+//		.pipe(jshint())
+//		.pipe(jshint.reporter('default'))
+		//		.pipe(rename({
+		//			suffix: '.min'
+		//		}))
+		.pipe(uglify()) //使用uglify进行压缩,更多配置请参考：
+		.pipe(gulp.dest('view/js/min'))//压缩后的路径
+		.pipe(notify({
+			message: 'Scripts task complete'
+		}));
+});
+
 // 压缩非mincss
 gulp.task('styles', function() {
 	return gulp.src(['assets/*.css', '!**/*min.css'])
@@ -39,14 +55,26 @@ gulp.task('styles', function() {
 		}));
 });
 
+
+//压缩手机端样式
+gulp.task('stylesphone', function() {
+	return gulp.src(['view/css/*.css', '!**/*min.css'])
+		.pipe(autoprefixer())
+		.pipe(minifycss())
+		.pipe(gulp.dest('view/css/min'))
+		.pipe(notify({
+			message: 'styles task complete'
+		}));
+});
+
 //压缩图片
 gulp.task('images', function() {
 	return gulp.src(['assets/images/**/*.png', 'assets/images/**/*.jpg', 'assets/images/**/*.gif','assets/images/**/*.jpeg'])
-		//		.pipe(cache(imagemin({
-		//			optimizationLevel: 3,
-		//			progressive: true,
-		//			interlaced: true
-		//		})))
+				.pipe(cache(imagemin({
+					optimizationLevel: 3,
+					progressive: true,
+					interlaced: true
+				})))
 		.pipe(gulp.dest('build'))
 		.pipe(notify({
 			message: 'Images task complete'
@@ -122,7 +150,9 @@ gulp.task('default', ['clean'], function() {
 
 gulp.task('default',function(){
 	gulp.run('scripts');
+	gulp.run('scriptsphone');
 	gulp.run('styles');
+	gulp.run('stylesphone');
 	gulp.run('images');
 	console.log('hello world');
 });

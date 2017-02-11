@@ -1,0 +1,224 @@
+	#phone{
+		width: 320px;
+		height: 486px;
+		background: #00A0E9;
+		position: absolute;
+		overflow: hidden;
+	}
+	#phone_contain{
+		width: 320px;
+		height: 486px;
+		background: #fff;
+		position: absolute;
+	}
+	#phone_box{
+		border:1px dashed #d7d7d7;
+		border-radius: 5px;
+		padding: 0;
+		width: 320px;
+		background: #0C0B11;
+		height: 670px;
+		position: absolute;
+
+	}
+	#title{
+	    height: 44px;
+	    line-height: 44px;
+	    font-size: 16px;
+	    width: 310px;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    color: #fff;
+	    padding: 5px;
+	    background: rgb(39, 39, 39);
+	}
+	#phone_top{
+		height: 20px;
+	    line-height: 20px;
+	    margin: 4px auto 20px;
+	    text-align: center;
+	}
+	#phone_bottom{
+	    height: 44;
+		width: 44px;
+		border-radius: 100%;
+		border: 1px solid #fff;
+		text-align: center;
+		margin: 10px auto;
+		background: #0e0e0e;
+		-moz-box-shadow: 0px -1px 1px #999 inset;
+		-webkit-box-shadow: 0px -1px 1px #999 inset;
+		box-shadow: 0px -1px 1px #999 inset;
+		position: absolute;
+		bottom: 0px;
+		left: 50%;
+		margin-left: -22px;
+	}
+	#phone_top_cirlce{
+		width: 5px;
+	    height: 5px;
+	    border-radius: 100%;
+	    border: 1px solid #fff;
+	    background: #000;
+	    /* display: inline-block; */
+	    -moz-box-shadow: 0px -1px 1px #999 inset;
+	    -webkit-box-shadow: 0px -1px 1px #999 inset;
+	    box-shadow: 0px -1px 1px #999 inset;
+	    text-align: center;
+	    margin: 10px auto 0px;
+	}
+	#circle{
+		width: 10px;
+		height: 10px;
+		border-radius: 100%;
+		border: 1px solid #fff;
+		background: #000;
+		display: inline-block;
+		 -moz-box-shadow:0px -1px 1px #999 inset;              /* For Firefox3.6+ */
+		-webkit-box-shadow:0px -1px 1px #999 inset;        /* For Chrome5+, Safari5+ */
+		box-shadow:0px -1px 1px #999 inset;                 /* For Latest Opera */
+	}
+	#squre{
+		width: 50px;
+		height: 10px;
+		border: 10px;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		background: #000;
+		display: inline-block;
+		 -moz-box-shadow:0px -1px 1px #999 inset;              /* For Firefox3.6+ */
+		-webkit-box-shadow:0px -1px 1px #999 inset;        /* For Chrome5+, Safari5+ */
+		box-shadow:0px -1px 1px #999 inset;                 /* For Latest Opera */
+		margin-right: 14px;
+	}
+
+	.loader{
+		    position: absolute;
+		    left: 50%;
+		    top: 30%;
+			box-sizing: border-box;
+		    display: -ms-flexbox;
+		    display: flex;
+		    -ms-flex: 0 1 auto;
+		    flex: 0 1 auto;
+		    -ms-flex-direction: column;
+		    flex-direction: column;
+		    -ms-flex-positive: 1;
+		    flex-grow: 1;
+		    -ms-flex-negative: 0;
+		    flex-shrink: 0;
+		    -ms-flex-preferred-size: 25%;
+		    flex-basis: 25%;
+		    max-width: 25%;
+		    height: 200px;
+		    -ms-flex-align: center;
+		    align-items: center;
+		    -ms-flex-pack: center;
+		    justify-content: center;
+	}
+	.line-spin-fade-loader {
+		    position: relative;
+		    top: -10px;
+		    left: -4px;
+	}
+	.line-spin-fade-loader>div:nth-child(1) {
+		    top: 20px;
+		    left: 0;
+		    -webkit-animation: line-spin-fade-loader 1.2s -.84s infinite ease-in-out;
+		    animation: line-spin-fade-loader 1.2s -.84s infinite ease-in-out
+	}
+
+	.line-spin-fade-loader>div:nth-child(2) {
+		    top: 13.64px;
+		    left: 13.64px;
+		    -webkit-transform: rotate(-45deg);
+		    transform: rotate(-45deg);
+		    -webkit-animation: line-spin-fade-loader 1.2s -.72s infinite ease-in-out;
+		    animation: line-spin-fade-loader 1.2s -.72s infinite ease-in-out
+	}
+
+	.line-spin-fade-loader>div:nth-child(3) {
+	    top: 0;
+	    left: 20px;
+	    -webkit-transform: rotate(90deg);
+	    transform: rotate(90deg);
+	    -webkit-animation: line-spin-fade-loader 1.2s -.6s infinite ease-in-out;
+	    animation: line-spin-fade-loader 1.2s -.6s infinite ease-in-out
+	}
+
+	.line-spin-fade-loader>div:nth-child(4) {
+	    top: -13.64px;
+	    left: 13.64px;
+	    -webkit-transform: rotate(45deg);
+	    transform: rotate(45deg);
+	    -webkit-animation: line-spin-fade-loader 1.2s -.48s infinite ease-in-out;
+	    animation: line-spin-fade-loader 1.2s -.48s infinite ease-in-out
+	}
+
+	.line-spin-fade-loader>div:nth-child(5) {
+	    top: -20px;
+	    left: 0;
+	    -webkit-animation: line-spin-fade-loader 1.2s -.36s infinite ease-in-out;
+	    animation: line-spin-fade-loader 1.2s -.36s infinite ease-in-out
+	}
+
+	.line-spin-fade-loader>div:nth-child(6) {
+	    top: -13.64px;
+	    left: -13.64px;
+	    -webkit-transform: rotate(-45deg);
+	    transform: rotate(-45deg);
+	    -webkit-animation: line-spin-fade-loader 1.2s -.24s infinite ease-in-out;
+	    animation: line-spin-fade-loader 1.2s -.24s infinite ease-in-out
+	}
+
+	.line-spin-fade-loader>div:nth-child(7) {
+	    top: 0;
+	    left: -20px;
+	    -webkit-transform: rotate(90deg);
+	    transform: rotate(90deg);
+	    -webkit-animation: line-spin-fade-loader 1.2s -.12s infinite ease-in-out;
+	    animation: line-spin-fade-loader 1.2s -.12s infinite ease-in-out
+	}
+
+	.line-spin-fade-loader>div:nth-child(8) {
+	    top: 13.64px;
+	    left: -13.64px;
+	    -webkit-transform: rotate(45deg);
+	    transform: rotate(45deg);
+	    -webkit-animation: line-spin-fade-loader 1.2s 0s infinite ease-in-out;
+	    animation: line-spin-fade-loader 1.2s 0s infinite ease-in-out
+	}
+
+	.line-spin-fade-loader>div {
+	    -webkit-animation-fill-mode: both;
+	    animation-fill-mode: both;
+	    position: absolute;
+	    width: 5px;
+	    height: 15px
+	}
+	@-webkit-keyframes line-spin-fade-loader {
+	    50% {
+	        opacity: .3
+	    }
+
+	    100% {
+	        opacity: 1
+	    }
+	}
+
+	@keyframes line-spin-fade-loader {
+	    50% {
+	        opacity: .3
+	    }
+
+	    100% {
+	        opacity: 1
+	    }
+	}
+
+	.line-spin-fade-loader>div {
+	    border-radius: 2px;
+	    margin: 2px;
+	    background-color: #00A0E9;
+	}
