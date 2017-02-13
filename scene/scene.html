@@ -1,53 +1,53 @@
 <div class="scene"  ng-controller="SceneCtrl">
 	<div class="contain" style="height: 100%">
-	<div class="t-left">
+	<div class="t-left" style="display: none">
 		left
 	</div>	
 
 	<div class="t-center">
-		<h1>Angular 适配器 for the Froala WYSIWYG 编辑器</h1>
-    <div class="sample">
+		<h1>文本编辑器</h1>
+    <!-- <div class="sample">
       <h2>在行内编辑</h2>
       <div froala="titleOptions" ng-model="myTitle"></div>
-    </div>
+    </div> -->
 
     <div class="sample">
-      <h2>全屏编辑</h2>
+     <!--  <h2>全屏编辑</h2> -->
       <textarea id="froala-sample-2" froala ng-model="sample2Text"></textarea>
-      <h4>渲染文本</h4>
-      <div froala-view="sample2Text"></div>
+      <!-- <h4>渲染文本</h4> -->
+     <!--  <div froala-view="sample2Text"></div> -->
     </div>
 
-    <div class="sample">
+    <!-- <div class="sample">
       <h2>Sample 3: 手动初始化</h2>
       <button class="manual" ng-click="initControls.initialize()">初始化编辑器</button>
       <button ng-click="initControls.destroy()" ng-show="initControls.getEditor() != null">关闭</button>
       <button ng-click="deleteAll()" ng-show="initControls.getEditor() != null">删除所有</button>
       <div id="froala-sample-3" froala froala-init="initialize(initControls)" ng-model="sample3Text">检查 <a href="https://www.froala.com/wysiwyg-editor">Froala 编辑器</a></div>
-    </div>
+    </div> -->
 
-    <div class="sample">
+    <!-- <div class="sample">
       <h2>Sample 4: 编辑图片</h2>
       <img froala ng-model="imgModel"/>
       <h4>Model Obj:</h4>
       <div>{{imgModel}}</div>
-    </div>
+    </div> -->
 
-    <div class="sample">
+    <!-- <div class="sample">
       <h2>Sample 5: 编辑按钮</h2>
       <button froala ng-model="buttonModel"></button>
       <h4>Model Obj:</h4>
       <div>{{buttonModel}}</div>
-    </div>
+    </div> -->
 
-    <div class="sample">
+    <!-- <div class="sample">
       <h2>Sample 6: 编辑input</h2>
       <input froala="inputOptions" ng-model="inputModel"/>
       <h4>Model Obj:</h4>
       <div>{{inputModel}}</div>
-    </div>
+    </div> -->
 
-    <div class="sample">
+    <!-- <div class="sample">
       <h2>Sample 7: a 链接初始化</h2>
       <button class="manual" ng-click="linkInitControls.initialize()">Initialize Editor</button>
       <button ng-click="linkInitControls.destroy()" ng-show="linkInitControls.getEditor() != null">关闭编辑器</button>
@@ -56,10 +56,10 @@
       </div>
       <h4>Model Obj:</h4>
       <div>{{linkModel}}</div>
-    </div>
+    </div> -->
 
 	</div>	
-	<div class="t-right">
+	<div class="t-right" style="display: none">
 		right
 	</div>	
 	</div>

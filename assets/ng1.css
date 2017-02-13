@@ -8168,9 +8168,9 @@ to {
 	border-radius:3px;
 	display:-webkit-box;
 	display:-moz-box;
-	display:box;
 	display:-moz-flex;
 	display:-ms-flexbox;
+	display:box;
 	width:100%
 }
 #main .rec-scene>li:hover {

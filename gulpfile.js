@@ -1,5 +1,7 @@
 // 载入外挂
 var gulp = require('gulp'),
+	sass = require('gulp-sass-china'),
+	dgbl = require('del-gulpsass-blank-lines');
 	minifycss = require('gulp-minify-css'), //压缩CSS
 //	jshint = require('gulp-jshint'),
 	uglify = require('gulp-uglify'),
@@ -109,6 +111,24 @@ gulp.task('fonts', function() {
 		}));
 });
 
+
+/*gulp编译sass*/
+//编译后存放的目录
+var path = {
+    scss: 'sass/'
+}
+
+//建立一个叫scss-monitor的任务
+gulp.task('scss-monitor', function() {
+        return gulp.src( path.scss + '*.scss')
+        .pipe( sass().on('error', sass.logError) )
+        .pipe( gulp.dest( path.scss + 'css') )
+        .pipe(notify({
+			message: 'scss-monitor task complete'
+		}));
+});
+
+
 /**
  * 删除所有编译文件
  */
@@ -121,7 +141,7 @@ gulp.task('clean', function() {
 
 // 预设任务
 gulp.task('default', ['clean'], function() {
-	gulp.start(['scripts', 'styles', 'images', 'htmls', 'min_css_js', 'fonts']);
+	gulp.start(['scripts', 'styles', 'images', 'htmls', 'min_css_js', 'fonts','scss-monitor']);
 });
 
 // 看手
@@ -154,5 +174,6 @@ gulp.task('default',function(){
 	gulp.run('styles');
 	gulp.run('stylesphone');
 	gulp.run('images');
+	gulp.run('scss-monitor')
 	console.log('hello world');
 });

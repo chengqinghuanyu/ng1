@@ -1,0 +1,497 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"phone",
+				"phone_contain"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"boder",
+				"border"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"h",
+				"hidden"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"mo",
+				"module"
+			],
+			[
+				"an",
+				"angular"
+			],
+			[
+				"re",
+				"resolve"
+			],
+			[
+				"con",
+				"controller"
+			],
+			[
+				"getDat",
+				"getDatas"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"c",
+				"cover"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"consol",
+				"console"
+			],
+			[
+				"tem",
+				"templateUrl"
+			],
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"get",
+				"getDanmu"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"el",
+				"element"
+			],
+			[
+				"p",
+				"provious"
+			],
+			[
+				"pr",
+				"prev"
+			],
+			[
+				"pro",
+				"provious"
+			],
+			[
+				"iem",
+				"items"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 307.0,
+		"last_filter": "inst",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"sass",
+				"Plugin Development: Convert Syntax to .sublime-syntax"
+			],
+			[
+				"install",
+				"Install Package Control"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 188.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read()); print( 'Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/sass/compass.scss",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/view/css/common.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/main/main.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/Public/5.4/main-ctrl.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/datas/main-ctrl.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/view/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/Public/5.4/eqShow5.4.2.js",
+		"/Users/yinpengxiao/.ssh/id_rsa.pub",
+		"/Applications/XAMPP/xamppfiles/xampp",
+		"/Applications/XAMPP/xamppfiles/mysql/scripts/ctl.sh",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/package.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/assets/eqShow-5.4.2.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/gulpfile.js",
+		"/Users/yinpengxiao/WeiXinProject/animate/walk/webkit_keyframes.css",
+		"/Users/yinpengxiao/WeiXinProject/pages/games/ws.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/datas/show.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/dialog/bindemail.tpl.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/view/a.js",
+		"/Users/yinpengxiao/angular-quickstart/app/main.ts",
+		"/Users/yinpengxiao/angular-quickstart/app/rxjs-extensions.ts",
+		"/Users/yinpengxiao/angular-quickstart/app/heroes.component.ts",
+		"/Users/yinpengxiao/angular-quickstart/app/in-memory-data.service.ts",
+		"/Users/yinpengxiao/angular-quickstart/app/hero.ts",
+		"/Users/yinpengxiao/angular-quickstart/app/hero.service.ts",
+		"/Users/yinpengxiao/angular-quickstart/app/hero-search.service.ts",
+		"/Users/yinpengxiao/angular-quickstart/app/dashboard.component.ts",
+		"/Users/yinpengxiao/angular-quickstart/app/hero-search.component.ts",
+		"/Users/yinpengxiao/Library/Application Support/Sublime Text 3/Packages/User/TypeScript.sublime-build",
+		"/Users/yinpengxiao/angular-quickstart/app/hero-detail.component.ts",
+		"/Users/yinpengxiao/angular-quickstart/app/app.routing.ts",
+		"/Users/yinpengxiao/angular-quickstart/app/app.component.ts",
+		"/Users/yinpengxiao/angular-quickstart/app/app.module.ts",
+		"/Users/yinpengxiao/angular-quickstart/package.json",
+		"/private/etc/hosts.equiv",
+		"/Users/yinpengxiao/mock/package.json",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/package.json",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/package 2.json",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/systemjs.config.js",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/dashboard.component.ts",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/dashboard.component.html",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/hero-search.component.ts",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/app.module.ts",
+		"/Users/yinpengxiao/Downloads/angular2-tour-of-heroes 2/app/app.module.ts",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/tsconfig.json",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/hero.ts",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/index.html",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/hero.service.ts",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/hero-detail.component.html",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/heroes.component.html",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/hero-detail.component.ts",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/styles.css",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/app.component.ts",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/heroes.component.css",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/heroes.component.ts",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/app.component.css",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/app-routing.module.ts",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/dashboard.component.css",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/hero-detail.component.css",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/main.ts",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/app/mock-heroes.ts",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/ts.config.json",
+		"/Users/yinpengxiao/angular2-tour-of-heroes/tsconfig.js",
+		"/Users/yinpengxiao/angular-quickstart/systemjs.config.js",
+		"/Users/yinpengxiao/angular-quickstart/tsconfig.json",
+		"/Users/yinpengxiao/angular-quickstart/styles.css",
+		"/Users/yinpengxiao/angular-quickstart/index.html",
+		"/Users/yinpengxiao/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/fedee9a6c2c0625503c4afc36273e298/Message/MessageTemp/e642204e03811c1cdde707febfba9d5b/File/main.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/web/ng1learning/home/homePage.html",
+		"/Users/yinpengxiao/ng2/app/hero.service.ts",
+		"/Users/yinpengxiao/ng2/app/hero.ts",
+		"/Users/yinpengxiao/ng2/app/heroes.component.ts",
+		"/Users/yinpengxiao/ng2/app/app.component.ts",
+		"/Users/yinpengxiao/ng2/app/app-routing.module.ts",
+		"/Users/yinpengxiao/ng2/app/app.module.ts",
+		"/Users/yinpengxiao/ng2/app/mock-heros.ts",
+		"/Users/yinpengxiao/ng2/app/hero-detail.component.ts",
+		"/Users/yinpengxiao/ng2/app/hero.servise.ts",
+		"/Users/yinpengxiao/ng2/app/heroes.component.css",
+		"/Users/yinpengxiao/ng2/app/heroes.component.html",
+		"/Users/yinpengxiao/ng2/app/dashboard.component.html",
+		"/Users/yinpengxiao/ng2/app/app.component.css",
+		"/Users/yinpengxiao/ng2/app/hero-detail.component.css",
+		"/Users/yinpengxiao/ng2/app/dashboard.component.css",
+		"/Users/yinpengxiao/ng2/app/dashboard.component.ts",
+		"/Users/yinpengxiao/ng2/index.html",
+		"/Users/yinpengxiao/ng2/app/main.ts",
+		"/Users/yinpengxiao/ng2/app/app.module.js",
+		"/Users/yinpengxiao/ng2/app/app.routing.ts",
+		"/Users/yinpengxiao/ng2/app/heroes.component.js",
+		"/Users/yinpengxiao/ng2/app/a.style.css",
+		"/Users/yinpengxiao/ng2/app/in-memory-data.service.ts",
+		"/Users/yinpengxiao/ng2/app/rxjs-extensions.ts",
+		"/Users/yinpengxiao/ng2/app/hero-search.service.ts",
+		"/Users/yinpengxiao/ng2/app/hero-search.component.ts",
+		"/Users/yinpengxiao/ng2/app/hero-search.component.css",
+		"/Users/yinpengxiao/ng2/app/hero-search.component.html",
+		"/Users/yinpengxiao/ng2/app/hero-detail.component.html",
+		"/Users/yinpengxiao/ng2/app/heros.componets.ts",
+		"/Users/yinpengxiao/ng2/app/heros.components.html",
+		"/Users/yinpengxiao/ng2/style.css",
+		"/Users/yinpengxiao/ng2/tsconfig.json",
+		"/Users/yinpengxiao/ng2/app/import { NgModule }      from '@angular:core';",
+		"/Users/yinpengxiao/ng2/typing.json",
+		"/Users/yinpengxiao/ng2/package.js",
+		"/Users/yinpengxiao/ng2/system.config.js",
+		"/Applications/XAMPP/xamppfiles/apache2/conf/httpd.conf",
+		"/Applications/XAMPP/xamppfiles/etc/httpd.conf",
+		"/Applications/XAMPP/xamppfiles/etc/extra/httpd-xampp.conf",
+		"/Volumes/ypx/learngit/znonz/index.html",
+		"/Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf",
+		"/Applications/XAMPP/xamppfiles/etc/extra/试试",
+		"/Applications/XAMPP/xamppfiles/etc/locales.conf",
+		"/Volumes/ypx/danmu.css",
+		"/Volumes/ypx/index.html",
+		"/Volumes/ypx/learngit/danmu.js",
+		"/Volumes/ypx/双向链表.js",
+		"/Volumes/ypx/链表.js",
+		"/Volumes/ypx/优先队列2.js",
+		"/Volumes/ypx/untitled",
+		"/Volumes/ypx/队列.js",
+		"/Volumes/ypx/duilie.js"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/yinpengxiao/angular2-tour-of-heroes",
+			"/Users/yinpengxiao/ng2"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"dirname",
+			"ju",
+			"*/\n",
+			"imgModel",
+			"../bower_components/froala-wysiwyg-editor/css/",
+			"../bower_components/froala-wysiwyg-editor/js/plugins/",
+			"=\"../",
+			"froala",
+			"bootstrap",
+			".contain .t-left, .contain .t-right",
+			"SceneCtrl",
+			"showqrcode",
+			"list",
+			"scene.lists.datas",
+			"MainCtrl",
+			"BindEmailDialogCtrl",
+			"$XAMPP_ROOT/bin/mysql.server start > /dev/null &",
+			"scene.lists.datas",
+			"secen.show",
+			"ShowCtrl",
+			"hero-search",
+			"Injectable",
+			"Component",
+			"AppComponent",
+			"class",
+			"export",
+			"HEROES",
+			"11",
+			"id",
+			"onSelect",
+			"HeroesComponent:",
+			"HeroesComponent",
+			"hero.servise",
+			"hero.service",
+			"/Applications/XAMPP/xamppfiles/xampp start",
+			"</Directory>",
+			"DocumentRoot",
+			"#DocumentRoot",
+			"#DocumentRoot \"",
+			"</Directory>",
+			"LocationMatch",
+			"<LocationMatch",
+			"<LocationMatch ",
+			"httpd-vhosts.conf",
+			"XAMPP/etc/extra/httpd-vhosts.conf",
+			"Applications/XAMPP/etc/extra/httpd-vhosts.conf",
+			"Include /Applications/XAMPP/etc/extra/httpd-vhosts.conf",
+			"httpd-vhosts.conf",
+			"Applications/XAMPP/etc/extra/httpd-vhosts.conf",
+			"Include /Applications/XAMPP/etc/extra/httpd-vhosts.conf"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Tool/froala_editor_2.4.2/css/plugins/",
+			"Tool/froala_editor_2.4.2/js/plugins/",
+			"=\"../",
+			"froala_editor",
+			"=\"../"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "common.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 250.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
