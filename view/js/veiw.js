@@ -13,7 +13,9 @@ if(mobilecheck()){
 			})
 			var bHeight = parseInt($("body").css("height"));
 			$("#phone_box").css({
-				height:bHeight+"px"
+				height:bHeight+"px",
+				left:"0",
+				top:'0'
 			})
 			$("#phone_contain").css({
 				"top":(bHeight-486)/2+"px"
