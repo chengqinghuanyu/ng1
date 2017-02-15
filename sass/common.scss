@@ -1,76 +1,141 @@
-$anime-time: 8s;
-
-$box-size: 350px;
-$clip-distance: .05;
-$clip-size: $box-size * (1 + $clip-distance * 2);
-$path-width: 2px;
-
-$main-color: #5FB9D5;
-
-$codepen-logo-path: url('//blog.codepen.io/wp-content/uploads/2012/06/Button-White-Large.png');
-
-%full-fill {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+//设置宽度
+$width:100%;
+$min-width:320px;
+$line-hegiht:1;
+$height:1;
+/*设置字体*/
+$font-famliy:"Hiragino Sans GB","华文细黑","STHeiti","微软雅黑",
+    "Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial;
+$base-color:#111;
+$alpha:0.5;
+$font-size:12px;
+$basemargin:10;
+$basemargin:0 !default;
+$border-direction:top;
+$hover-div-color:#f00;
+$hover-bg-color:#e0e;
+$hover-border-color:#ffb907;
+/*正文*/
+body{
+  width:$width;
+  height:$height;
+  font-family:$font-famliy;
+  color:$base-color;
+  background:$base-color;
+  font-size:$font-size;
+  margin:$basemargin;
+  div{
+    height:$height;
+    line-height:$line-hegiht;
+  }
+}
+.border-#{$border-direction}{
+  border-#{$border-direction}:1px solid #d7d7d7;
+  &:hover{
+    color: $hover-div-color;
+    border-color:$hover-border-color;
+  }
 }
 
-.bb {
-  @extend %full-fill;
-  width: $box-size;
-  height: $box-size;
-  margin: auto;
-  background: $codepen-logo-path no-repeat 50% / 70% rgba(#000, .1);
-  color: $main-color;
-  box-shadow: inset 0 0 0 1px rgba($main-color, .5);
-
-  &::before,
-  &::after {
-    @extend %full-fill;
-    content: '';
-    z-index: -1;
-    margin: -1 * $clip-distance * 100%;
-    box-shadow: inset 0 0 0 $path-width; 
-    animation: clipMe $anime-time linear infinite;
+/*函数*/
+$set-head:(-top:2em,-right:1.5em,-bottom:1em,-left:0.8em,-m:0.5em);
+@each $header,$em in $set-head{
+  .contain#{$header}{
+    font-size: $em;
   }
+}
 
-  &::before {
-    animation-delay: $anime-time * -.5;
-  }
 
-  // for debug
-  &:hover {
-    &::after,
-    &::before {
-      background-color: rgba(#f00, .3);
+.contain{
+  border:{
+    style:solid;
+    left:{
+      width: 4px;
+      color: #044;
+    }
+    right:{
+      width: 5px;
+      color: #567
     }
   }
+}
+.a-#{$height}-bottom{
+        width:100px;
+        height:44px;
+    }
 
+.parent-1 {
+  color:#f00;
+  .child {
+    width:100px;
+  }
 }
 
-@keyframes clipMe {
-  0%, 100% {clip: rect(0px, $clip-size, $path-width, 0px); }
-  25% {clip: rect(0px, $path-width, $clip-size, 0px); }
-  50% {clip: rect($clip-size - $path-width, $clip-size, $clip-size, 0px); }
-  75% {clip: rect(0px, $clip-size, $clip-size, $clip-size - $path-width); }
+//单个选择器跳出
+.parent-2 {
+  color:#f00;
+  @at-root .child {
+    width:200px;
+  }
+}
+.parent-3 {
+  background:#f00;
+  @at-root {
+    .child1 {
+      width:300px;
+    }
+    .child2 {
+      width:400px;
+    }
+  }
 }
 
-/////
 
-html,
-body {
-  height: 100%;
+@mixin center-block {
+    margin-left:auto;
+    margin-right:auto;
+}
+.demo{
+  @include center-block;
 }
 
-body {
-  position: relative;
-  background-color: #0f222b;
+  .div-top{
+    position: absolute;
+    @extend .demo;
+  }
+@function pxToRem($px){
+  @return $px/$font-size*1rem;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.div-gilop{
+  height: pxToRem(16px);
 }
+$mg:false;
+$type:good;
+p{
+  @if $type == warn {
+  color:red;
+} @else if $type == success {
+  color:green;
+} @else if $type == good {
+  color:#091;
+} @else {
+  color:#000;
+}
+}
+.mg-#{$mg}{
+  @if $mg {
+    color:#000;
+    }@else{
+      color:#dedede;
+    }
+  
+} 
+
+.top{
+ top:if($mg, 1px, 2px);
+}
+
+
+
+

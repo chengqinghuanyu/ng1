@@ -1,47 +1,83 @@
-.bb, .bb::before, .bb::after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-
-.bb {
-  width: 350px;
-  height: 350px;
-  margin: auto;
-  background: url("//blog.codepen.io/wp-content/uploads/2012/06/Button-White-Large.png") no-repeat 50%/70% rgba(0, 0, 0, 0.1);
-  color: #5FB9D5;
-  box-shadow: inset 0 0 0 1px rgba(95, 185, 213, 0.5); }
-  .bb::before, .bb::after {
-    content: '';
-    z-index: -1;
-    margin: -5%;
-    box-shadow: inset 0 0 0 2px;
-    animation: clipMe 8s linear infinite; }
-  .bb::before {
-    animation-delay: -4s; }
-  .bb:hover::after, .bb:hover::before {
-    background-color: rgba(255, 0, 0, 0.3); }
-
-@keyframes clipMe {
-  0%, 100% {
-    clip: rect(0px, 385px, 2px, 0px); }
-  25% {
-    clip: rect(0px, 2px, 385px, 0px); }
-  50% {
-    clip: rect(383px, 385px, 385px, 0px); }
-  75% {
-    clip: rect(0px, 385px, 385px, 383px); } }
-
-html,
+@charset "UTF-8";
+/*设置字体*/
+/*正文*/
 body {
-  height: 100%; }
+  width: 100%;
+  height: 1;
+  font-family: "Hiragino Sans GB", "华文细黑", "STHeiti", "微软雅黑", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial;
+  color: #111;
+  background: #111;
+  font-size: 12px;
+  margin: 10; }
+  body div {
+    height: 1;
+    line-height: 1; }
 
-body {
-  position: relative;
-  background-color: #0f222b; }
+.border-top {
+  border-top: 1px solid #d7d7d7; }
+  .border-top:hover {
+    color: #f00;
+    border-color: #ffb907; }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box; }
+/*函数*/
+.contain-top {
+  font-size: 2em; }
+
+.contain-right {
+  font-size: 1.5em; }
+
+.contain-bottom {
+  font-size: 1em; }
+
+.contain-left {
+  font-size: 0.8em; }
+
+.contain-m {
+  font-size: 0.5em; }
+
+.contain {
+  border-style: solid;
+  border-left-width: 4px;
+  border-left-color: #044;
+  border-right-width: 5px;
+  border-right-color: #567; }
+
+.a-1-bottom {
+  width: 100px;
+  height: 44px; }
+
+.parent-1 {
+  color: #f00; }
+  .parent-1 .child {
+    width: 100px; }
+
+.parent-2 {
+  color: #f00; }
+  .child {
+    width: 200px; }
+
+.parent-3 {
+  background: #f00; }
+  .child1 {
+    width: 300px; }
+  .child2 {
+    width: 400px; }
+
+.demo, .div-top {
+  margin-left: auto;
+  margin-right: auto; }
+
+.div-top {
+  position: absolute; }
+
+.div-gilop {
+  height: 1.33333rem; }
+
+p {
+  color: #091; }
+
+.mg-false {
+  color: #dedede; }
+
+.top {
+  top: 2px; }
