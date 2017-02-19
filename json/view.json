@@ -1,0 +1,116 @@
+{
+    "success": true,
+    "code": 200,
+    "msg": "操作成功",
+    "obj": {
+        "id": 9912375,
+        "scenecode": "U802Q8WFU4",
+        "name": "hh",
+        "createUser": "9851",
+        "type": 101,
+        "pageMode": 0,
+        "image": {
+            "imgSrc": "http://show.bongv.com/Uploads/default_thum.jpg",
+            "lastPageId": 0,
+            "hideEqAd": 0,
+            "isAdvancedUser": 0,
+            "bgAudio": null
+        },
+        "property": "{\"triggerLoop\":true,\"eqAdType\":1,\"hideEqAd\":false,\"lastPageId\":604960,\"slideNumber\":false,\"autoFlipTime\":3}",
+        "timeout": "",
+        "timeout_url": "",
+        "accessCode": null,
+        "cover": "http://show.bongv.com/Uploads/default_thum.jpg",
+        "bgAudio": "null",
+        "isTpl": 0,
+        "isPromotion": 0,
+        "status": 1,
+        "openLimit": 0,
+        "startDate": null,
+        "endDate": null,
+        "updateTime": 1426045746000,
+        "createTime": 1426572693000,
+        "publishTime": 1426572693000,
+        "applyTemplate": 0,
+        "applyPromotion": 0,
+        "sourceId": null,
+        "code": "U802Q8WFU4",
+        "description": "",
+        "sort": 0,
+        "pageCount": 0,
+        "dataCount": 0,
+        "showCount": 0,
+        "eqcode": "",
+        "userLoginName": null,
+        "userName": null
+    },
+    "map": null,
+    "list": [
+        {
+            "id": 204507,
+            "sceneId": 9912375,
+            "num": 1,
+            "name": null,
+            "properties": null,
+            "elements": [
+                {
+                    "content": "<span style=\"font-size:24px\">点击此处进行编辑</span>",
+                    "css": {
+                        "top": 52,
+                        "left": 7,
+                        "zIndex": "101",
+                        "width": 320,
+                        "height": 38,
+                        "lineHeight": "1.0"
+                    },
+                    "id": 2999245401,
+                    "num": 1,
+                    "pageId": 204507,
+                    "properties": {
+                        "src": "",
+                        "imgSrc": ""
+                    },
+                    "sceneId": 9912375,
+                    "title": null,
+                    "type": "2",
+                    "pagenum": 1
+                }
+            ],
+            "scene": null
+        },
+        {
+            "id": 204508,
+            "sceneId": 9912375,
+            "num": 2,
+            "name": null,
+            "properties": {
+                "longPage": 5
+            },
+            "elements": [
+                {
+                    "content": "<span style=\"font-size:24px\">点击此处进行编辑</span>",
+                    "css": {
+                        "top": "100px",
+                        "left": "0px",
+                        "zIndex": "101",
+                        "width": 320,
+                        "height": 38,
+                        "lineHeight": "1.0"
+                    },
+                    "id": 616760636,
+                    "num": 1,
+                    "pageId": 204508,
+                    "properties": {
+                        "src": "",
+                        "imgSrc": ""
+                    },
+                    "sceneId": 9912375,
+                    "title": null,
+                    "type": "2",
+                    "pagenum": 2
+                }
+            ],
+            "scene": null
+        }
+    ]
+}
