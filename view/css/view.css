@@ -318,6 +318,31 @@
 		line-height:32px;
 		font-size:16px
 	}
+
+	.main-page.z-current {
+	    z-index: 1;
+	    display: inline-block;
+	}
+	.z-current {
+	    opacity: 1;
+	}
+	.main-page {
+	    border: 0;
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    background-position: top center;
+	    background-size: cover;
+	    box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    display: -webkit-box;
+	    -webkit-box-orient: vertical;
+	    overflow: hidden;
+	    z-index: 0;
+	    display: none;
+	    -webkit-transform-origin: center center;
+	    background: #f6f7fb;
+	}
 	#phone_box{
 		border:1px dashed #d7d7d7;
 		border-radius: 5px;
@@ -531,3 +556,51 @@
 	    margin: 2px;
 	    background-color: #00A0E9;
 	}
+	.u-arrow-bottom {
+	    position: absolute;
+	    bottom: 30px;
+	    left: 50%;
+	    z-index: 10000;
+	    width: 24px;
+	    height: 14px;
+	    margin-left: -7px;
+	}
+	.u-arrow-bottom img {
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    margin: -7px 0 0 -14px;
+	    width: 24px;
+	    height: 14px;
+	    background-position: 0 -82px;
+	    -webkit-animation: start 1.5s infinite ease-in-out;
+	    -moz-animation: start 1.5s infinite ease-in-out;
+	    animation: start 1.5s infinite ease-in-out;
+	}
+	@-webkit-keyframes start {
+		0%,30%{
+			opacity:0;
+			-webkit-transform:translate(0,10px)}
+			60%{
+				opacity:1;
+				-webkit-transform:translate(0,0)
+			}
+			100%{
+				opacity:0;
+				-webkit-transform:translate(0,-8px)
+			}
+		}
+		@keyframes start {
+			0%,30%{
+				opacity:0;
+				transform:translate(0,10px)
+				}
+			60%{
+				opacity:1;
+				transform:translate(0,0)
+				}
+			100%{
+				opacity:0;
+				transform:translate(0,-8px)
+			}
+		}

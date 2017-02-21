@@ -47,15 +47,7 @@ if(mobilecheck()){
 		}else{
 			
 		}
-	function isWeixin() {
-		var a = navigator.userAgent.toLowerCase();
-		return "micromessenger" == a.match(/MicroMessenger/i) ? !0 : !1
-	}
-	function isAndroid() {
-		var a = navigator.userAgent,
-			b = (navigator.appVersion, a.indexOf("Android") > -1 || a.indexOf("Linux") > -1);
-		return b
-	}
+
 var tplCount = 0;
 	!function(a, b) {
 		
@@ -74,7 +66,7 @@ var tplCount = 0;
 		}
 		function d(b) {
 
-			templateParser = c(a)
+			var templateParser = c(a)
 			console.log(templateParser);
 		}
 		var e = a.eqShow || (a.eqShow = {});
@@ -106,11 +98,11 @@ var tplCount = 0;
 			})
 		}
 		function f(a) {
+
 			for (var b = $(a).find("a[data]"), c = 0; c < b.length; c++) if (b[c] && "view" == i.mode) {
 				$(b[c]).css("cursor", "pointer");
 				var d = $(b[c]).attr("data");
-				!
-				function(a) {
+				!function(a) {
 					b[c].removeAttribute("href"), $(b[c]).click(function(b) {
 						eqxiu.pageScroll(a)
 					})
@@ -181,7 +173,9 @@ var tplCount = 0;
 							zIndex: a.css.zIndex,
 							bottom: a.css.bottom,
 							transform: a.css.transform
-						}), (0 === a.css.boxShadowSize || "0" == a.css.boxShadowSize) && (a.css.boxShadow = "rgba(0,0,0,0) 0 0 0"), "edit" != i.mode && "x" == ("" + a.type).charAt(0)) return e.append(c), e.find(".element-box").css({
+						}), (0 === a.css.boxShadowSize || "0" == a.css.boxShadowSize) && (a.css.boxShadow = "rgba(0,0,0,0) 0 0 0"), "edit" != i.mode && "x" == ("" + a.type).charAt(0))
+						 {
+						 	return e.append(c), e.find(".element-box").css({
 							borderStyle: a.css.borderStyle,
 							borderWidth: a.css.borderWidth,
 							borderColor: a.css.borderColor,
@@ -195,22 +189,19 @@ var tplCount = 0;
 							width: "100%",
 							height: "100%",
 							overflow: "hidden"
-						}), e.find("img").css({
-							width: "100%"
 						}), e;
-						isAndroid() && isWeixin() && 4 == a.type && "0px" != a.css.borderRadius && 0 == a.css.borderWidth && a.properties.anim && (a.css.borderWidth = 1, a.css.borderColor = "rgba(0,0,0,0)"), e.css(a.css).css({
-							width: "100%",
-							height: "100%",
+						}
+						e.css(a.css).css({
 							transform: "none"
-						}), e.children(".element-box-contents").css({
+						}), 
+						e.find(".element-box-contents").css({
 							width: "100%",
 							height: "100%"
-						}), 4 != ("" + a.type).charAt(0) && "n" != ("" + a.type).charAt(0) && "p" != ("" + a.type).charAt(0) && "h" != ("" + a.type).charAt(0) && $(c).css({
+						}), 
+						$(c).css({
 							width: a.css.width,
 							height: a.css.height
-						}),a.css.accessKey && f.attr("data-key",a.css.accessKey),
-						a.css.fontStyle && $("head").append("<style>" + a.css.fontStyle + "</style>"),
-						"h" == ("" + a.type).charAt(0) && ($(c).find("g").length ? $(c).find("g").attr("fill", a.css.color) : $(c).children().attr("fill", a.css.color), f.children(".element-box-contents").css("position", "relative"))
+						})
 					}
 					return e
 				}
@@ -226,11 +217,20 @@ var tplCount = 0;
 					}
 				}				
 				a = new_obj;
-				for (var b = 0; b < a.length - 1; b++) for (var c = b + 1; c < a.length; c++) if (parseInt(a[b].css.zIndex, 10) > parseInt(a[c].css.zIndex, 10)) {
-					var d = a[b];
-					a[b] = a[c], a[c] = d
+				for (var b = 0; b < a.length - 1; b++) {
+					for (var c = b + 1; c < a.length; c++){
+						if (parseInt(a[b].css.zIndex, 10) > parseInt(a[c].css.zIndex, 10)) {
+
+						var d = a[b];
+						a[b] = a[c], a[c] = d
+						}
+					}
 				}
-				for (var e = 0; e < a.length; e++) a[e].css.zIndex = e + 1 + "";
+				 
+					
+				for (var e = 0; e < a.length; e++) {
+					a[e].css.zIndex = e + 1 + "";
+				}
 				return a
 			}
 			function d(a, d, e) {
@@ -238,16 +238,20 @@ var tplCount = 0;
 				var f, i = a.elements;
 				if(i){
 					for (i = c(i), f = 0; f < i.length; f++) {
+
 					var k = b(i[f], e);
 					if (!k) continue;
 					d.append(k);
-					for (var p = 0; p < o.length; p++) o[p](k, i[f], e);
+					for (var p = 0; p < o.length; p++) {
+						o[p](k, i[f], e);
+					}
 
 					n[("" + i[f].type).charAt(0)] && (
 
 						n[("" + i[f].type).charAt(0)](k, i[f]), "edit" != e && (g(k, i[f]), h(k, i[f]))
 						); 
-				"edit" == e && m[("" + i[f].type).charAt(0)] && m[("" + i[f].type).charAt(0)](k, i[f])
+
+					"edit" == e && m[("" + i[f].type).charAt(0)] && m[("" + i[f].type).charAt(0)](k, i[f])
 
 					}
 				}
@@ -308,7 +312,7 @@ var tplCount = 0;
 		}), 
 
 		i.bindAfterRenderEvent("2", function(a, b) {
-			//alert(112233);
+			console.log(111222);
 			f(a)
 		});
 		var j
@@ -333,10 +337,12 @@ var tplCount = 0;
 			var k = 0,
 				l = 0;
 			j.contain.on("mousedown touchstart", function(a) {
+				console.log(333);
 				return "button" == a.target.tagName.toLowerCase() || a.target.getAttribute("data") || a.target.getAttribute("href") || "8" == a.target.getAttribute("ctype") ? void a.stopPropagation() : (a.stopPropagation(), a.preventDefault(), void(j.touchPos < j.pLen || j.touchPos > 0 || (c = !0, e = 0, j.stopInertiaMove = !0, d = a.originalEvent.touches ? a.originalEvent.changedTouches[0].clientY : a.clientY, "WE" == h && (f = a.originalEvent.touches ? a.originalEvent.changedTouches[0].clientX : a.clientX), l = j.touchPos, k = Date.now())))
 			}), 
 
 			j.contain.on("mousemove touchmove", function(a) {
+				console.log(222);
 				if (a.stopPropagation(), c) {
 					if (e = j.touchPos + (a.originalEvent.touches ? a.originalEvent.changedTouches[0].clientY : a.clientY) - d, "WE" == h && (g = (a.originalEvent.touches ? a.originalEvent.touches[0].clientX : a.clientX) - f, Math.abs(g) > Math.abs(e - j.touchPos) && !scene.property.forbidHandFlip)) {
 						if (g > 0) {
@@ -355,7 +361,7 @@ var tplCount = 0;
 				}
 			}), 
 			j.contain.on("mouseup touchend mouseleave", function(a) {
-
+				console.log(111);
 				if (a.stopPropagation(), c) {
 					if (c = !1, mobilecheck() && 0 === e) return void $(a.target).trigger("click");
 					if (!(0 > e && e > j.pLen)) return e >= 0 ? void(j.touchPos = 0) : void(j.touchPos = j.pLen);
@@ -432,7 +438,8 @@ var tplCount = 0;
 			for (var e = 1; e <= a.length; e++) {
 
 				$('<section class="main-page"><div class="m-img" id="page' + e + '"></div></section>').appendTo(".phone-view"); 
-				a.length > 1 && ($('<section class="u-arrow-bottom"><div class="pre-wrap"><div class="pre-box1"><div class="pre1"></div></div><div class="pre-box2"><div class="pre2"></div></div></div></section>').appendTo("#page" + e), $('<section class="u-arrow-right"><div class="pre-wrap-right"><div class="pre-box3"><div class="pre3"></div></div><div class="pre-box4"><div class="pre4"></div></div></div></section>').appendTo("#page" + e));
+
+				a.length > 1 && ($('<section class="u-arrow-bottom"><img src="../build/btn01_arrow.png"></section>').appendTo("#page" + e), $('<section class="u-arrow-right"><img src="../build/btn01_arrow.png"></section>').appendTo("#page" + e));
 				 1 == e && $(".phone-view .main-page").eq(0).addClass("z-current");
 
 				var f = e;
@@ -440,9 +447,13 @@ var tplCount = 0;
 			}
 			0 === c || 1 == c || 2 == c || 6 == c || 7 == c || 8 == c || 11 == c || 12 == c ? $(".phone-view .u-arrow-right").hide() : (3 == c || 4 == c || 5 == c || 9 == c || 10 == c) && $(".phone-view .u-arrow-bottom").hide()
 		}
+
 	
 	i(c, b);
 	$(".loader").remove();
+	$(".z-current").on("mousedown touchstart",function(){
+		console.log(112233);
+	})
 
 	
 	

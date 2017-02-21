@@ -22,3 +22,4 @@ iphoneCheck = function() {
 isIOS = function() {
     return /ipad|iphone/i.test(navigator.userAgent)
 }
+
