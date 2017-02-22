@@ -419,8 +419,8 @@ var tplCount = 0;
 					alert("Connection error")
 			},
 			success: function(a) {
-				c = JSON.parse(a).list;
-				b=  JSON.parse(a).list.length;
+				c = a.list;
+				b=  a.list.length;
 			}
 		});
 
