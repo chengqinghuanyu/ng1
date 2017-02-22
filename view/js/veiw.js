@@ -421,7 +421,7 @@ var tplCount = 0;
 	$.ajax({
 			url:'../json/view.json',
 			cache: !0,
-			type: "GET",
+			type: "POST",
 			async: !1,
 			error: function(a) {
 					alert("Connection error")
