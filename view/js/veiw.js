@@ -421,9 +421,9 @@ var tplCount = 0;
 			},
 			success: function(a) {
 				
-					c = JSON.parse(a).list;
+					c = a.list;
 					
-					b=  JSON.parse(a).list.length;
+					b=  a.list.length;
 				
 				
 			}
