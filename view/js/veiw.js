@@ -412,7 +412,7 @@ var tplCount = 0;
 	var c =[],b=1;
 	$.ajax({
 			url:'../json/view.json',
-			"contentType": "application/x-www-form-urlencoded; charset=utf-8",
+			contentType: "text/html; charset=utf-8",
 			cache: !0,
 			type: "GET",
 			async: !1,
@@ -421,9 +421,9 @@ var tplCount = 0;
 			},
 			success: function(a) {
 				
-					c = a.list;
+					c = JSON.parse(a).list;
 					
-					b=  a.list.length;
+					b=  JSON.parse(a).list.length;
 				
 				
 			}
