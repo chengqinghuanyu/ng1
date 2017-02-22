@@ -303,8 +303,6 @@ var tplCount = 0;
 		});
 
 		i.addInterceptor(function(a, b, c) {
-
-			//eqxCommon.animation(a, b, c, i.def.properties)
 		}), 
 		i.addComponent("2", function(a) {
 			var b = document.createElement("div");
@@ -320,9 +318,6 @@ var tplCount = 0;
 
 
 	function renderPage(a, b, c) {
-
-
-		//新增长页的预览效果图函数-start
 		function showtpl(a, b) {
 			var c, d, e, f, g, h = window.scene ? scene.pageMode : 0,
 				i = 0,
@@ -392,7 +387,6 @@ var tplCount = 0;
 				j.touchPos = 0
 			})
 		}
-		//新增长页的预览效果图函数-end
 		a.templateParser("jsonParser").parse({
 			def: c[b - 1],
 			appendTo: "#page" + b,
@@ -412,8 +406,6 @@ var tplCount = 0;
 		}), d && $(".edit_area").css({
 			marginLeft: d
 		}), tplCount == c.length && $("#eqMobileViewport").attr("content", "width=320, initial-scale=" + f + ", maximum-scale=" + f + ", user-scalable=no"),
-
-		//添加长页时编辑预览页面的效果
 		c[b - 1].properties && c[b - 1].properties.longPage && showtpl(b, c[b - 1].properties.longPage)
 	}
 
