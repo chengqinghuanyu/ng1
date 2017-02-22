@@ -410,7 +410,7 @@ var tplCount = 0;
 	}
 
 	var c =[],b=1;
-	$.ajax({
+	$.ajax({ 
 			url:'../json/view.json',
 			contentType: "text/html; charset=utf-8",
 			cache: !0,
