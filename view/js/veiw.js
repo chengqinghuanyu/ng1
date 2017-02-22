@@ -412,6 +412,7 @@ var tplCount = 0;
 	var c =[],b=1;
 	$.ajax({
 			url:'../json/view.json',
+			"contentType": "application/x-www-form-urlencoded; charset=utf-8",
 			cache: !0,
 			type: "GET",
 			async: !1,
@@ -419,8 +420,12 @@ var tplCount = 0;
 					alert("Connection error")
 			},
 			success: function(a) {
-				c = a.list;
-				b=  a.list.length;
+				
+					c = JSON.parse(a).list;
+					
+					b=  JSON.parse(a).list.length;
+				
+				
 			}
 		});
 
