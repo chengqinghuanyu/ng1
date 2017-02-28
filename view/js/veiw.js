@@ -419,9 +419,9 @@ var tplCount = 0;
 			error: function(a) {
 					alert("Connection error")
 			},
-			success: function(a) {
+			success: function(a) {   
 				if(a instanceof Object){
-					c = a.list;
+					c = a.list;   
 					
 					b=  a.list.length;
 				}else{
