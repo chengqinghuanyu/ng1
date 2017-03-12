@@ -458,5 +458,28 @@ var tplCount = 0;
 		console.log(112233);
 	})
 
+
+	//音乐的暂停和播放
+	$(".music-default").on("click",function(e){
+		var _this = $(".music-default")
+		swap_music(_this);
+	})
+	 function swap_music(obj) {
+
+            var oAudio = document.getElementById("audio");
+            if (oAudio.paused) {
+                oAudio.play(); 
+                obj.removeClass("off");
+                obj.addClass("on");
+            }
+            else {
+                oAudio.pause(); 
+                obj.removeClass("on");
+                obj.addClass("off");
+            }
+        }
+
+
+
 	
 	
