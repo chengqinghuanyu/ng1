@@ -479,6 +479,17 @@ var tplCount = 0;
             }
         }
 
+        $("span:even").bind({
+        	click:function(){
+        		console.log($(this));},
+        	mouseover:function(){
+        		$(this).css("background","red")
+        	},
+        	mouseout:function(){
+        		$(this).css("background","blue")
+        	}
+        })
+
 
 
 	
